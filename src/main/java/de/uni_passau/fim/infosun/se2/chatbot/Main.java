@@ -3,6 +3,7 @@ package de.uni_passau.fim.infosun.se2.chatbot;
 import de.uni_passau.fim.infosun.se2.chatbot.action.Action;
 import de.uni_passau.fim.infosun.se2.chatbot.action.DefaultAction;
 import de.uni_passau.fim.infosun.se2.chatbot.action.ExitAction;
+import de.uni_passau.fim.infosun.se2.chatbot.action.MensaAction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,7 @@ public class Main {
 
   public static void main(String[] args) {
     final List<Action> handlers = new ArrayList<>();
+    handlers.add(new MensaAction());
     handlers.add(new ExitAction());
     handlers.add(new DefaultAction());
 
