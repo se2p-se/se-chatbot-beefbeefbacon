@@ -7,7 +7,8 @@ public class WeatherAction implements Action {
   /** {@inheritDoc} */
   @Override
   public boolean accept(final String pRequest) {
-    return pRequest.contains("wetter");
+    return pRequest.contains("wetter")
+        || pRequest.contains("temperatur");
   }
 
   /** {@inheritDoc} */
