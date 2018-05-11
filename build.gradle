@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'distribution'
+    id 'idea'
+}
+
+group 'de.uni_passau.fim.infosun.se2'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'de.uni_passau.fim.infosun.se2.chatbot.Main'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // JSON.simple, cf. https://code.google.com/p/json-simple/
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
+
+compileJava {
+    options.compilerArgs << "-Xlint:all"
+}
+
+startScripts {
+    applicationName = rootProject.name
+}
+
+run {
+    standardInput = System.in
+}
