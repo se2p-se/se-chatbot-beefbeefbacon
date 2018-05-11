@@ -12,6 +12,7 @@ public class Main {
 
   public static void main(String[] args) {
     final List<Action> handlers = new ArrayList<>();
+    handlers.add(new WeatherAction());
     handlers.add(new MensaAction());
     handlers.add(new ExitAction());
     handlers.add(new HelpAction());
