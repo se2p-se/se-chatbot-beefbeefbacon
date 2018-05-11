@@ -16,6 +16,7 @@ public class Main {
     handlers.add(new DateTimeAction());
     handlers.add(new MensaAction());
     handlers.add(new ExitAction());
+    handlers.add(new HelloAction());
     handlers.add(new HelpAction());
     handlers.add(new DefaultAction());
 
