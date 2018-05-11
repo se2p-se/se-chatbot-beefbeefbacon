@@ -6,6 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Main class of the bot.
+ *
+ * <p>Initializes a list of supported {@link Action}s, and tries to apply them to provided input
+ * requests in the order of their initialization.
+ *
+ * <p>The first {@link Action} that accepts a request is run on that input, and the program
+ * continues reading the next input from the user.
+ *
+ * <p>If an {@link Action} requests the end of the conversation, the program terminates.
+ */
 public class Main {
 
   private Main() {}
