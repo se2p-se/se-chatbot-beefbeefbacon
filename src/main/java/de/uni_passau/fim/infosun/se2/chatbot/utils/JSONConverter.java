@@ -5,7 +5,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.security.InvalidParameterException;
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Provides a static method to retrieve a special element of a given JSON string.
@@ -25,7 +25,7 @@ public class JSONConverter {
    * @return the content of the element as a string
    * @throws ParseException if the given string cannot be parsed
    */
-  public static String getContentOfElement(final String pJSON, final List<String> pKeys)
+  public static String getContentOfElement(final String pJSON, final ArrayList<String> pKeys)
       throws ParseException {
     // throw an exception if there is no key
     if (pKeys == null || pKeys.isEmpty()) {
