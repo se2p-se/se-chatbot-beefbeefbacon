@@ -7,7 +7,7 @@ public class HelpAction implements Action {
   /** {@inheritDoc} */
   @Override
   public boolean accept(final String pRequest) {
-    return pRequest.contains("hilfe");
+    return pRequest.contains("hilf");
   }
 
   /** {@inheritDoc} */
